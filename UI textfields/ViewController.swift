@@ -9,17 +9,32 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // UI objects
+    @IBOutlet weak var tfDigitsOnly: UITextField!
+    @IBOutlet weak var tfCash: UITextField!
+    @IBOutlet weak var tfLockable: UITextField!
+    @IBOutlet weak var lockSwitch: UISwitch!
+    
+    // Delegates
+    let digits_delegate = DigitsDelegate()
+    let cash_delegate = CashDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tfDigitsOnly.delegate = self.digits_delegate
+        self.tfCash.delegate = self.cash_delegate
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    
+    
+    
+    
+    
 
-
-}
+} // end ViewController
 
