@@ -23,17 +23,18 @@ class DigitsDelegate : NSObject, UITextFieldDelegate {
 
 
     
+    // Allow digits only
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         
         let test = textField.text! + string
-        let matched = tools.matches(for: "^\\d+$",
+        let matched = tools.matches(for: "^\\d{0,5}$",
                                     in: test)
-        print(matched)
-        
-        if matched.count == 0 {
-            return false } else { return true }
+
+        if matched.count == 0  {
+            return false // Do not allow non-numbers to be writting in tge textField
+        } else { return true }
         
     } // end shoudChangeCharactersIn()
     
