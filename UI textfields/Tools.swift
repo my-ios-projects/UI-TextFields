@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Tools: NSObject {
+class Tools {
 
-func matches(for regex: String, in text: String) -> [String] {
+static func matches(for regex: String, in text: String) -> [String] {
     
     do {
         let regex = try NSRegularExpression(pattern: regex)
