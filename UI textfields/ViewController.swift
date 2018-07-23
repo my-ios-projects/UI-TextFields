@@ -26,10 +26,20 @@ class ViewController: UIViewController {
         
         self.tfDigitsOnly.delegate = self.digits_delegate
         self.tfCash.delegate = self.cash_delegate
-
     }
 
     
+    @IBAction func lockableAction(_ sender: Any) {
+        
+        
+        if lockSwitch.isOn {
+            tfLockable.isEnabled = true
+        } else {
+            tfLockable.isEnabled = false
+        }
+        
+        
+    } // end lockableAction
     
     
     

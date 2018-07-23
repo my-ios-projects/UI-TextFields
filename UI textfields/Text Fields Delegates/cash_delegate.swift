@@ -12,6 +12,13 @@ import UIKit
 
 class CashDelegate: NSObject, UITextFieldDelegate {
     
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        
+        
+        return true
+    } // end textField
     
     
 

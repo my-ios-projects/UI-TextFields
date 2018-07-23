@@ -1,9 +1,6 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
-import Foundation
-
-
 
 func matches(for regex: String, in text: String) -> [String] {
     
@@ -24,4 +21,24 @@ func matches(for regex: String, in text: String) -> [String] {
 
 let string = "123"
 let matched = matches(for: "^\\d+$", in: string)
-print(matched)
+
+
+
+
+let string1 = "1"
+var newString = ""
+for char in string1 {
+    char
+}
+
+// From Numbers to String
+let x: Float = 132/1000
+String(x)
+
+// From String to numbers
+let x1: String = "123"
+Float(x1)
+
+
+
+

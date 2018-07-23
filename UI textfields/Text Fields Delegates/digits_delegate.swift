@@ -14,14 +14,6 @@ import UIKit
 class DigitsDelegate : NSObject, UITextFieldDelegate {
     
 
-    let tools = Tools()
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        textField.text = ""
-        return true
-    }
-
-
     
     // Allow digits only
     func textField(_ textField: UITextField,
@@ -29,7 +21,7 @@ class DigitsDelegate : NSObject, UITextFieldDelegate {
                    replacementString string: String) -> Bool {
         
         let test = textField.text! + string
-        let matched = tools.matches(for: "^\\d{0,5}$",
+        let matched = Tools.matches(for: "^\\d{0,5}$",
                                     in: test)
 
         if matched.count == 0  {
